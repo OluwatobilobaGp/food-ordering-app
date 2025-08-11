@@ -1,4 +1,5 @@
 import CartButton from "@/components/CartButton";
+import QuicksandText from "@/components/QuicksandText";
 import { images, offers } from "@/constants";
 import cn from 'clsx';
 import { Fragment } from "react";
@@ -29,19 +30,16 @@ export default function Index() {
                     </View>
 
                     <View className={cn("offer-card__info", isEven ? 'pl-10' : 'pr-10')}>
-                      <Text className="h1-bold text-white leading-tight">
-                        {item.title}
-                      </Text>
+                     
+                      <QuicksandText title={item.title} />
+
                       <Image
                         source={images.arrowRight}
                         className="size-10"
                         resizeMode="contain"
                         tintColor="#ffff"
                       />
-
-
                     </View>
-
 
                   </Fragment>
                 )}
@@ -53,7 +51,7 @@ export default function Index() {
         ListHeaderComponent={() => (
           <View className="flex-between flex-row w-full my-5">
             <View className="flex-start">
-              <Text className="small-bold text-primary">DELIVERY TO</Text>
+              <Text className="small-bold text-primary font-quicksand-semibold" style={{ fontFamily: 'QuickSand-Bold' }}>DELIVERY TO</Text>
               <TouchableOpacity className="flex-center flex-row gap-x-1 mt-0.5">
                 <Text className="paragraph-bold text-dark-100">Nigeria</Text>
                 <Image source={images.arrowDown} className="size-3" resizeMode="contain" />
