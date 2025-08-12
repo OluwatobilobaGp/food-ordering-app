@@ -1,4 +1,3 @@
-import SignIn from "@/app/(auth)/sign-in";
 import { CreateUserParams, SignInParams } from "@/type";
 import { Account, Avatars, Client, Databases, ID, Query } from "react-native-appwrite";
 
@@ -14,8 +13,8 @@ export const client = new Client();
 
 client 
     .setEndpoint(appwriteConfig.endpoint)
-    .setEndpoint(appwriteConfig.projectId)
-    .setEndpoint(appwriteConfig.platform)
+    .setProject(appwriteConfig.projectId)
+    .setPlatform(appwriteConfig.platform)
     
 export const account = new Account(client);
 export const databases = new Databases(client);

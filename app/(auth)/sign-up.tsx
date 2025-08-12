@@ -1,15 +1,15 @@
 import CustomButton from '@/components/CustomButton'
 import CustomInput from '@/components/Custominput'
+import { createUser } from '@/lib/appwrite'
 import { Link, router } from 'expo-router'
 import React, { useState } from 'react'
 import { Alert, Text, View } from 'react-native'
 import '../global.css'
-import { createUser } from '@/lib/appwrite'
 
 
 
-const SignUp = () => {
-    const [isSubmitting, setIsSubmitting] = useState(false);
+export default function SignUp (){
+        const [isSubmitting, setIsSubmitting] = useState(false);
     const [form, setForm] = useState({ name: '', email: '', password: '' });
 
     const submit = async () => {
@@ -75,6 +75,6 @@ const SignUp = () => {
 
         </View>
     )
+
 }
 
-export default SignUp
