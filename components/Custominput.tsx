@@ -1,7 +1,7 @@
-import { CustomInputProps } from '@/type'
-import { useState } from 'react'
-import { Text, TextInput, View } from 'react-native'
+import { CustomInputProps } from '@/type';
 import cn from "clsx";
+import { useState } from 'react';
+import { Text, TextInput, View } from 'react-native';
 
 
 const CustomInput = ({
@@ -11,6 +11,7 @@ const CustomInput = ({
     label,
     secureTextEntry = false,
     keyboardType = "default",
+
 } : CustomInputProps ) => {
     const [isFocused, setIsFocused] = useState(false);
 

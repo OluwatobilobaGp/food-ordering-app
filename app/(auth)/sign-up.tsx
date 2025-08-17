@@ -30,12 +30,13 @@ export default function SignUp() {
     }
 
     return (
-        <View className="flex-1 justify-center items-center px-4 bg-white">
+        <View className='gap-10 bg-white rounded-lg p-5 mt-5' >
             <CustomInput
                 placeholder='Enter your full name'
                 value={form.name}
                 onChangeText={(text) => setForm((prev) => ({ ...prev, name: text }))}
                 label="Full name"
+                
             />
 
             <CustomInput
@@ -61,10 +62,10 @@ export default function SignUp() {
             />
 
             <View className='flex flex-row justify-center items-center mt-5 gap-2'>
-                <Text className='text-lg font-quicksand text-gray-100'>
+                <Text className='text-lg font-quicksand-bold text-gray-100' style={{ fontFamily: 'QuickSand-Bold' }}>
                     Already have an Account?
                 </Text>
-                <Link href="/sign-in" className="text-lg font-quicksand-bold text-primary">
+                <Link href="/sign-in" className="text-lg font-quicksand-bold text-primary" style={{ fontFamily: 'QuickSand-Bold' }}>
                     Sign In
                 </Link>
             </View>
