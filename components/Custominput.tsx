@@ -1,8 +1,7 @@
-import { CustomInputProps } from '@/type';
-import cn from "clsx";
-import { useState } from 'react';
 import { Text, TextInput, View } from 'react-native';
-
+import { CustomInputProps } from '@/type';
+import { useState } from 'react';
+import cn from "clsx";
 
 const CustomInput = ({
     placeholder = "Enter Text",
@@ -18,7 +17,7 @@ const CustomInput = ({
 
   return (
     <View className='w-full'>
-      <Text className='label'>{label}</Text>
+      <Text className='label' style={{ fontFamily: 'QuickSand-Bold' }}>{label}</Text>
 
       <TextInput 
             autoCapitalize='none'
@@ -32,6 +31,7 @@ const CustomInput = ({
             placeholder={placeholder}
             placeholderTextColor="#888"
             className={cn('input',isFocused ? 'border-primary' : 'border-grey-300')}
+            style={{ fontFamily: 'QuickSand-Bold' }}
        />
     </View>
   )

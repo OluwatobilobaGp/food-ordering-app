@@ -1,24 +1,24 @@
-import CustomButton from '@/components/CustomButton'
-import CustomInput from '@/components/Custominput'
-import { createUser } from '@/lib/appwrite'
-import { Link, router } from 'expo-router'
-import React, { useState } from 'react'
 import { Alert, Text, View } from 'react-native'
+import { Link, router } from 'expo-router'
+import CustomInput from '@/components/Custominput'
+import CustomButton from '@/components/CustomButton'
+import { useState } from 'react'
+import { createUser } from '@/lib/appwrite'
 
-export default function SignUp() {
+const SignUp = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [form, setForm] = useState({ name: '', email: '', password: '' });
 
     const submit = async () => {
         const { name, email, password } = form;
 
-        if (!name || !email || !password) return Alert.alert('Error', 'Please enter valid email address & password.');
+        if(!name || !email || !password) return Alert.alert('Error', 'Please enter valid email address & password.');
 
         setIsSubmitting(true)
 
         try {
 
-            await createUser({ email, password, name });
+            await createUser({ email,  password,  name });
 
             router.replace('/');
         } catch (error: any) {
@@ -56,7 +56,7 @@ export default function SignUp() {
             />
 
             <CustomButton
-                title='Sign Up'
+                title="Sign Up"
                 isLoading={isSubmitting}
                 onPress={submit}
             />
@@ -74,4 +74,6 @@ export default function SignUp() {
     )
 
 }
+
+export default SignUp
 

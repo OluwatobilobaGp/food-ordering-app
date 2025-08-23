@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "fastfood",
-    "slug": "fastfood",
+    "slug": "food-order",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.tobi_gp.foodorder"
     },
     "web": {
       "bundler": "metro",
@@ -33,10 +34,25 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "react-native",
+          "organization": "asg-glorious-tech"
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "f86a712c-e64e-4724-b70b-525411b5a0d0"
+      }
+    },
+    "owner": "tobi_gp"
   }
 }

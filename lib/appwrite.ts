@@ -1,5 +1,5 @@
-import { CreateUserParams, SignInParams } from "@/type";
 import { Account, Avatars, Client, Databases, ID, Query } from "react-native-appwrite";
+import { CreateUserParams, SignInParams } from "@/type";
 
 export const appwriteConfig = {
     endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT!,
@@ -22,7 +22,7 @@ export const avatars = new Avatars(client);
 
 export const createUser = async ({ email, password, name }: CreateUserParams) => {
     try {
-        const newAccount = await account.create(ID.unique(), email, password  );
+        const newAccount = await account.create(ID.unique(), email, password, name);
         if(!newAccount) throw Error;
 
         await signIn({ email, password});
@@ -33,10 +33,8 @@ export const createUser = async ({ email, password, name }: CreateUserParams) =>
             appwriteConfig.databaseId,
             appwriteConfig.userCollectionId,
             ID.unique(),
-            {  email, name, accountId: newAccount.$id, avatars:avatarUrl }
+            {  email, name, accountId: newAccount.$id, avatar: avatarUrl }
         );
-
-
     }catch(e){
         throw new Error(e as string);
     }
