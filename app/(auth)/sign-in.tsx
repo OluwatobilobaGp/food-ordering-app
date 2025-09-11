@@ -4,7 +4,7 @@ import Sentry from "@sentry/react-native"
 import { Link, router } from 'expo-router'
 import React, { useState } from 'react'
 import { Alert, Text, View } from 'react-native'
-import '../global.css'
+// import '../global.css'
 
 
 
