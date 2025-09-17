@@ -101,6 +101,7 @@ export const getCategories = async () => {
         )
 
         return categories.documents;
+
     } catch (e) {
         throw new Error(e as string);
     }

@@ -1,5 +1,7 @@
 import CartButton from '@/components/CartButton';
+import Filter from '@/components/Filter';
 import MenuCard from '@/components/MenuCard';
+import SearchBar from '@/components/SearchBar';
 import { getCategories, getMenu } from '@/lib/appwrite';
 import useAppwrite from '@/lib/useAppwrite';
 import { MenuItem } from '@/type';
@@ -49,8 +51,8 @@ useEffect(() => {
 
                 <CartButton />
               </View>
-              <Text>Search Input</Text>
-              <Text>Filter</Text>
+              <SearchBar />
+              <Filter categories={categories!} />
             </View>
           )}
           ListEmptyComponent={() => !loading && <Text>No Result</Text>}
