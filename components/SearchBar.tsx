@@ -18,15 +18,15 @@ const SearchBar = () => {
   }
 
   return (
-    <View className='searchbar'>
+    <View className="relative flex flex-row items-center justify-center w-full bg-white shadow-md shadow-black/10 rounded-full  font-quicksand-medium text-dark-100 gap-5">
       <TextInput
         className='flex-1 p-5'
         placeholder='search for pizzaz, burges...'
         value={query}
         onChangeText={handleSearch}
         onSubmitEditing={handleSubmit}
-        placeholderTextColor="A0A0A0"
-        returnKeyType='Search'
+        placeholderTextColor="#A0A0A0"
+        returnKeyType="Search"
       />
       <TouchableOpacity
         className='pr-5'
