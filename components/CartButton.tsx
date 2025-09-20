@@ -9,7 +9,7 @@ const CartButton = () => {
       <Image source={images.bag} className="size-5" resizeMode="contain" />
       {totalItems > 0 && (
         <View className='absolute -top-2 -right-1 flex items-center justify-center size-5 bg-primary rounded-full font-quicksand-bold' >
-          <Text className='small-bold text-white'>{totalItems}</Text>
+          <Text className='small-bold text-white' style={{ fontFamily: 'QuickSand-Bold' }}>{totalItems}</Text>
         </View>
       )}
     </TouchableOpacity>
