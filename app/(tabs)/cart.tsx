@@ -38,7 +38,28 @@ const Cart = () => {
                 Payment Summary
               </Text>
 
-              <PaymentInfoStripe label={`Total Items (${totalItems})`} />
+              <PaymentInfoStripe 
+                  label={`Total Items (${totalItems})`}
+                  value={`$${totalPrice.toFixed(2)}`}
+              />
+              <PaymentInfoStripe 
+                  label={`Delivery Fee`}
+                  value={`$5.00`}
+              />
+              <PaymentInfoStripe 
+                  label={`Discount`}
+                  value={`- $0.50`}
+                  valueStyle='!text-success'
+              />
+
+              <View className='border-t border-gray-300 my-2' />
+              
+              <PaymentInfoStripe 
+                  label={`Total Items (${totalItems})`}
+                  value={`$${totalPrice.toFixed(2)}`}
+              />
+              
+
 
 
 
