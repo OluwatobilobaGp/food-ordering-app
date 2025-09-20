@@ -18,10 +18,10 @@ const SearchBar = () => {
   }
 
   return (
-    <View className="relative flex flex-row items-center justify-center w-full bg-white shadow-md shadow-black/10 rounded-full  font-quicksand-medium text-dark-100 gap-5">
+    <View className="searchbar">
       <TextInput
-        className='flex-1 p-5'
-        placeholder='search for pizzaz, burges...'
+        className="flex-1 p-5"
+        placeholder="Search for pizzaz, burges..."
         value={query}
         onChangeText={handleSearch}
         onSubmitEditing={handleSubmit}
@@ -29,13 +29,13 @@ const SearchBar = () => {
         returnKeyType="Search"
       />
       <TouchableOpacity
-        className='pr-5'
+        className="pr-5"
         onPress={() => router.setParams({ query })}
       >
         <Image
           source={images.search}
-          className='size-6'
-          resizeMode='contain'
+          className="size-6"
+          resizeMode="contain"
           tintColor="#5D5F6D"
         />
       </TouchableOpacity>
