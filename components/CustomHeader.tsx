@@ -17,7 +17,7 @@ const CustomHeader = ({ title }: CustomHeaderProps) => {
                 />
             </TouchableOpacity>
 
-            {title && <Text className="base-semibold text-dark-100">{title}</Text>}
+            {title && <Text className="base-semibold text-dark-100" style={{ fontFamily: 'QuickSand-Bold' }} >{title}</Text>}
 
             <Image source={images.search} className="size-5" resizeMode="contain" />
         </View>

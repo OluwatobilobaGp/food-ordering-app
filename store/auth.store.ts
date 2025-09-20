@@ -39,7 +39,15 @@ const useAuthStore = create<AuthState>((set) => ({
     } finally {
       set({ isLoading: false });
     }
-  }
+  },
+
+  // logout: async () => {
+  //   await account.deleteSession('current');
+  //   set({ user: null });
+  //   router.push('/sign-in');
+  // },
+  
+
 }))
 
 
