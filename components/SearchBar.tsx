@@ -14,7 +14,7 @@ const SearchBar = () => {
   };
 
   const handleSubmit = () => {
-        if(query.trim()) router.setParams({ query });
+    if (query.trim()) router.setParams({ query });
   }
 
   return (
@@ -23,6 +23,7 @@ const SearchBar = () => {
         className="flex-1 p-5"
         placeholder="Search for pizzaz, burges..."
         value={query}
+        style={{ fontFamily: 'QuickSand-Bold' }}
         onChangeText={handleSearch}
         onSubmitEditing={handleSubmit}
         placeholderTextColor="#A0A0A0"

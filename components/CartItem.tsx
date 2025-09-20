@@ -18,8 +18,8 @@ const CartItem = ({ item }: { item: CartItemType }) => {
                 </View>
 
                 <View>
-                    <Text className="base-bold text-dark-100">{item.name}</Text>
-                    <Text className="paragraph-bold text-primary mt-1">
+                    <Text className="base-bold text-dark-100" style={{ fontFamily: 'QuickSand-Bold' }}>{item.name}</Text>
+                    <Text className="paragraph-bold text-primary mt-1" style={{ fontFamily: 'QuickSand-Bold' }}>
                         ${item.price}
                     </Text>
 
@@ -36,7 +36,7 @@ const CartItem = ({ item }: { item: CartItemType }) => {
                             />
                         </TouchableOpacity>
 
-                        <Text className="base-bold text-dark-100">{item.quantity}</Text>
+                        <Text className="base-bold text-dark-100" style={{ fontFamily: 'QuickSand-Bold' }}>{item.quantity}</Text>
 
                         <TouchableOpacity
                             onPress={() => increaseQty(item.id, item.customizations!)}

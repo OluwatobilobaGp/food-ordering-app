@@ -31,10 +31,10 @@ const Filter = ({ categories }: { categories: Category[] }) => {
                 <TouchableOpacity
                     key={item.$id}
                     className={cn('filter', active === item.$id ? 'bg-amber-500' : 'bg-white')}
-                    style={Platform.OS === 'android' ? { elevation: 5, shadowColor: '#878787'} : {}}
+                    style={Platform.OS === 'android' ? { elevation: 5, shadowColor: '#878787'} : {}  }
                     onPress={() => handlePress(item.$id)}
                 >
-                    <Text className={cn('body-medium', active === item.$id ? 'text-white' : 'text-gray-200')}>{item.name}</Text>
+                    <Text style={{ fontFamily: 'QuickSand-Bold' }} className={cn('body-medium', active === item.$id ? 'text-white' : 'text-gray-200')} >{item.name}</Text>
                 </TouchableOpacity>
             )}
         />
